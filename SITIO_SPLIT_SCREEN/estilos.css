@@ -1,0 +1,129 @@
+* { box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+.font_roboto{
+  font-family: 'Roboto', sans-serif;
+  font-size: 4rem;
+}
+.font_merry{
+  font-family: 'Merriweather', serif;
+  font-size: 2rem;
+}
+
+body{
+    height: 100vh;
+    width: 100%;
+}
+.myButton {
+	box-shadow:inset 0px 0px 14px -3px #f2fadc;
+	background:linear-gradient(to bottom, #dbe6c4 5%, #6f754b 100%);
+	background-color:#dbe6c4;
+	border-radius:6px;
+	border:1px solid #969970;
+	display:inline-block;
+	cursor:pointer;
+	color:#5c5c09;
+	font-family:Arial;
+	font-size:15px;
+	font-weight:bold;
+	padding:6px 24px;
+	text-decoration:none;
+	text-shadow:0px 1px 0px #ced9bf;
+}
+.myButton:hover {
+	background:linear-gradient(to bottom, #6f754b 5%, #dbe6c4 100%);
+	background-color:#6f754b;
+}
+.myButton:active {
+	position:relative;
+	top:1px;
+}
+
+a{
+  font-family: 'Roboto', sans-serif; 
+  font-size: 1rem;
+  display: inline-block;
+  line-height: 1;
+  background-color: #818a91;
+  padding: 12px 24px;
+  margin-top: 10px;
+  -webkit-border-radius: 3px;
+  border-radius: 3px;
+  color: #fff;
+  fill: #fff;
+  text-align: center;
+  -webkit-transition: all .3s;
+  -o-transition: all .3s;
+  transition: all .3s;
+  align-items: center;
+}
+p{
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  font-weight: lighter;
+  font-size: 1rem;
+  padding-top: 3%;
+
+}
+.div0{
+  display: flex;
+  flex-direction: row;
+  height: 100vh;
+  width: 100%;
+}
+.div1{
+  /*background-image: linear-gradient(to right, rgb(32, 58, 92), rgb(64, 38, 134), rgb(2, 0, 134), rgb(25, 39, 230));*/
+  background-image: linear-gradient(to right, #ff512f, #f09819);
+  width: 50%;
+  height: 100%;
+  padding: 4%;
+  padding-top: 10%;
+ 
+}
+.div3{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+}
+.carousel{
+  display: flex;
+  /*flex-direction: column;*/
+  background-image: url("img/img_3.jpg");
+  background-size: cover;
+  object-fit: contain;
+  background-repeat: no-repeat;
+  height: 100vh;
+  width: 50%;
+  padding: 0px 0px;
+    
+  /*ANIMACIONES*/
+  animation-name: trans;
+  animation-duration: 12s;
+  animation-delay: 3s;
+  animation-iteration-count: infinite;
+  animation-timing-function:ease-in-out;
+}
+@keyframes trans{
+  33% {background-image: url("img/img_1.jpg")}
+  66% {background-image: url("img/img_2.jpg")}
+  100% {background-image: url("img/img_3.jpg")}
+}
+@media only screen and (max-width: 800px){
+  .div0{
+    flex-direction: column;
+  }  
+  .div1{
+    height: 50%;
+    width: 100%;
+    overflow: auto; 
+  }
+  .carousel{
+    height: 50%;
+    width: 100%;
+    background-size:cover;
+    
+    
+  }
+}  
